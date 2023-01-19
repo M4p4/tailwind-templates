@@ -11,7 +11,6 @@ import {
   SunIcon,
 } from '@heroicons/react/24/outline';
 import Sidebar from './Sidebar';
-import SidebarTest from './SidebarTest';
 
 const Navbar = () => {
   const [isMounted, setIsMounted] = useState(false);
