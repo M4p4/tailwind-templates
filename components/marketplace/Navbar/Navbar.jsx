@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
@@ -11,49 +11,20 @@ import {
   SunIcon,
 } from '@heroicons/react/24/outline';
 import Sidebar from './Sidebar';
+import useTheme from '@/components/hooks/useTheme';
 
 const Navbar = () => {
-  const [isMounted, setIsMounted] = useState(false);
-  const [showSidebar, setShowSidebar] = useState(false);
-  const [theme, setTheme] = useState(() => {
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-      return localStorage.getItem('theme');
-    }
-    if (
-      typeof window !== 'undefined' &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      return 'dark';
-    }
-    return 'light';
-  });
-
-  const toogleSidebar = () => {
-    setShowSidebar((current) => !current);
-  };
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    localStorage.setItem('theme', newTheme);
-    setTheme(newTheme);
-  };
-
-  useEffect(() => {
-    const root = document.documentElement;
-    if (theme === 'light') {
-      root.classList.remove('dark');
-    } else {
-      root.classList.add('dark');
-    }
-  }, [theme]);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const { toogleSidebar, isMounted, showSidebar, toggleTheme, theme } =
+    useTheme();
 
   return (
     <>
-      <Sidebar isShowing={showSidebar} toogleSidebar={toogleSidebar} />
+      <Sidebar
+        isShowing={showSidebar}
+        toogleSidebar={toogleSidebar}
+        toggleTheme={toggleTheme}
+        theme={theme}
+      />
       <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-200 min-h-screen">
         <div className="container p-5 flex justify-between items-center space-x-4 xs:space-x-8 xl:space-x-12 mx-auto">
           <div className="flex justify-start flex-grow items-center space-x-3 lg:space-x-8">
