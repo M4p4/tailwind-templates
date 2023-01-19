@@ -12,6 +12,7 @@ import {
 } from '@heroicons/react/24/outline';
 import Sidebar from './Sidebar';
 import useTheme from '@/components/hooks/useTheme';
+import Image from 'next/image';
 
 const Navbar = () => {
   const { toogleSidebar, isMounted, showSidebar, toggleTheme, theme } =
@@ -51,10 +52,12 @@ const Navbar = () => {
                 <span className="absolute bg-blue-500 rounded-full top-2 right-2 h-2 w-2 "></span>
                 <BellIcon className="w-6 h-6" />
               </button>
-              <img
+              <Image
                 className="rounded-full w-8 h-8 border dark:border-gray-700 border-gray-200"
                 alt="avatar"
                 src="/images/me.jpg"
+                width={50}
+                height={50}
               />
               <div className="p-2 cursor-pointer" onClick={toogleSidebar}>
                 <Bars3Icon className="w-8 h-8" />
@@ -90,10 +93,12 @@ const Navbar = () => {
                 Create
               </div>
               <div className="flex-shrink-0 inline-flex cursor-pointer">
-                <img
+                <Image
                   className="rounded-full w-10 h-10 border dark:border-gray-700 border-gray-200"
                   alt="avatar"
                   src="/images/me.jpg"
+                  width={50}
+                  height={50}
                 />
               </div>
             </div>
