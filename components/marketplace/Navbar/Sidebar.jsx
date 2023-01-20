@@ -1,11 +1,21 @@
 import useOutsideDetection from '@/components/hooks/useOutsideDetection';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 import { XMarkIcon } from '@heroicons/react/24/solid';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Sidebar = ({ isShowing, toogleSidebar, toggleTheme, theme }) => {
   const sidebarRef = useRef(null);
   useOutsideDetection(isShowing ? sidebarRef : null, toogleSidebar);
+
+  useEffect(() => {
+    if (!isShowing) {
+      document.body.style.overflow = 'unset';
+    } else {
+      if (typeof window != 'undefined' && window.document) {
+        document.body.style.overflow = 'hidden';
+      }
+    }
+  }, [isShowing]);
 
   return (
     <>
