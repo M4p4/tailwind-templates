@@ -32,7 +32,7 @@ const Avatar = ({ smallSize = false }) => {
   });
 
   return (
-    <div className="relative">
+    <div className="relative" ref={avatarRef}>
       <Image
         className={classNames(
           smallSize ? 'w-8 h-8' : 'w-10 h-10',
@@ -47,11 +47,12 @@ const Avatar = ({ smallSize = false }) => {
         }}
       />
       {showMenu ? (
-        <div className="absolute z-10 w-screen max-w-[260px] px-4 mt-3 -right-10 sm:right-0 sm:px-0 opacity-100 translate-y-0">
-          <div
-            className="dark:bg-slate-800 bg-white p-5 rounded-2xl grid grid-cols-1 gap-5 border border-slate-200 dark:border-slate-700"
-            ref={avatarRef}
-          >
+        <div
+          className={classNames(
+            'absolute z-10 w-screen max-w-[260px] px-4 mt-3 -right-20 sm:right-0 sm:px-0 translate-y-0'
+          )}
+        >
+          <div className="dark:bg-slate-800 bg-white p-5 rounded-2xl grid grid-cols-1 gap-5 border border-slate-200 dark:border-slate-700">
             <div className="flex items-center space-x-3">
               <Image
                 className="rounded-full border w-12 h-12 dark:border-gray-700 border-gray-200"
@@ -65,7 +66,7 @@ const Avatar = ({ smallSize = false }) => {
                 <span className="text-sm">0x1337133713...1337</span>
               </div>
             </div>
-            <div class="w-full border-b border-slate-200 dark:border-slate-700"></div>
+            <div className="w-full border-b border-slate-200 dark:border-slate-700"></div>
             <ul>
               {mockUserNav.map(({ name, icon }) => (
                 <li
@@ -77,7 +78,7 @@ const Avatar = ({ smallSize = false }) => {
                 </li>
               ))}
             </ul>
-            <div class="w-full border-b border-slate-200 dark:border-slate-700"></div>
+            <div className="w-full border-b border-slate-200 dark:border-slate-700"></div>
             <ul>
               <li className="flex items-center p-2 dark:hover:bg-slate-700 hover:bg-slate-200 rounded-lg">
                 <ArrowLeftOnRectangleIcon className="h-5 w-5" />

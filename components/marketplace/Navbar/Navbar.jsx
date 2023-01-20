@@ -14,6 +14,7 @@ import Sidebar from './Sidebar';
 import useTheme from '@/components/hooks/useTheme';
 import Image from 'next/image';
 import Avatar from './Avatar';
+import Notifications from './Notifications';
 
 const Navbar = () => {
   const { toogleSidebar, isMounted, showSidebar, toggleTheme, theme } =
@@ -21,12 +22,14 @@ const Navbar = () => {
 
   return (
     <>
-      <Sidebar
-        isShowing={showSidebar}
-        toogleSidebar={toogleSidebar}
-        toggleTheme={toggleTheme}
-        theme={theme}
-      />
+      {isMounted ? (
+        <Sidebar
+          isShowing={showSidebar}
+          toogleSidebar={toogleSidebar}
+          toggleTheme={toggleTheme}
+          theme={theme}
+        />
+      ) : null}
       <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-200 min-h-screen">
         <div className="container p-5 flex justify-between items-center space-x-4 xs:space-x-8 xl:space-x-12 mx-auto">
           <div className="flex justify-start flex-grow items-center space-x-3 lg:space-x-8">
@@ -49,10 +52,7 @@ const Navbar = () => {
           </div>
           <div className="flex justify-end items-center space-x-1 text-sm xl:text-base">
             <div className="flex xl:hidden items-center space-x-3">
-              <button className="hover:dark:bg-slate-800 hover:bg-slate-200 rounded-full p-3 relative">
-                <span className="absolute bg-blue-500 rounded-full top-2 right-2 h-2 w-2 "></span>
-                <BellIcon className="w-6 h-6" />
-              </button>
+              <Notifications />
               <Avatar smallSize />
               <div className="p-2 cursor-pointer" onClick={toogleSidebar}>
                 <Bars3Icon className="w-8 h-8" />
@@ -79,10 +79,7 @@ const Navbar = () => {
                     )}
                   </button>
                 ) : null}
-                <button className="hover:dark:bg-slate-800 hover:bg-slate-200 rounded-full p-3 relative">
-                  <span className="absolute bg-blue-500 rounded-full top-2 right-2 h-2 w-2 "></span>
-                  <BellIcon className="w-6 h-6" />
-                </button>
+                <Notifications />
               </div>
               <div className="bg-sky-600 hover:bg-sky-700 text-slate-200 rounded-full py-2 px-4 font-medium cursor-pointer">
                 Create
