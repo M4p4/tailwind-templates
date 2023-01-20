@@ -49,7 +49,7 @@ const Avatar = ({ smallSize = false }) => {
       {showMenu ? (
         <div className="absolute z-10 w-screen max-w-[260px] px-4 mt-3 -right-10 sm:right-0 sm:px-0 opacity-100 translate-y-0">
           <div
-            className="bg-slate-800 p-5 rounded-2xl grid grid-cols-1 gap-5"
+            className="dark:bg-slate-800 bg-white p-5 rounded-2xl grid grid-cols-1 gap-5 border border-slate-200 dark:border-slate-700"
             ref={avatarRef}
           >
             <div className="flex items-center space-x-3">
@@ -69,7 +69,7 @@ const Avatar = ({ smallSize = false }) => {
             <ul>
               {mockUserNav.map(({ name, icon }) => (
                 <li
-                  className="flex items-center p-2 hover:bg-slate-700 rounded-lg"
+                  className="flex items-center p-2 dark:hover:bg-slate-700 hover:bg-slate-200 rounded-lg"
                   key={name}
                 >
                   {icon}
@@ -79,7 +79,7 @@ const Avatar = ({ smallSize = false }) => {
             </ul>
             <div class="w-full border-b border-slate-200 dark:border-slate-700"></div>
             <ul>
-              <li className="flex items-center p-2 hover:bg-slate-700 rounded-lg">
+              <li className="flex items-center p-2 dark:hover:bg-slate-700 hover:bg-slate-200 rounded-lg">
                 <ArrowLeftOnRectangleIcon className="h-5 w-5" />
                 <span className="ml-4">Disconnect</span>
               </li>

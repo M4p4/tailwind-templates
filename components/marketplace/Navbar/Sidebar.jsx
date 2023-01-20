@@ -60,10 +60,10 @@ const Sidebar = ({ isShowing, toogleSidebar, toggleTheme, theme }) => {
           </div>
         </div>
         <ul className="flex flex-col space-y-1 text-slate-900 dark:text-slate-200 justify-center p-3 text-sm font-medium tracking-wide uppercase">
-          <li className="hover:bg-slate-800 rounded-lg px-3 py-2 cursor-pointer">
+          <li className="dark:hover:bg-slate-800 hover:bg-slate-200 rounded-lg px-3 py-2 cursor-pointer">
             Discover
           </li>
-          <li className="hover:bg-slate-800 rounded-lg px-3 py-2 cursor-pointer">
+          <li className="dark:hover:bg-slate-800 hover:bg-slate-200 rounded-lg px-3 py-2 cursor-pointer">
             Help Center
           </li>
         </ul>
