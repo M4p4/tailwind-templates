@@ -7,12 +7,12 @@ const HeroSection = () => {
     <>
       <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8">
         <div className="flex flex-col space-y-12 w-full lg:w-1/2 pb-14 lg:pr-1">
-          <h1 className="font-bold text-4xl md:text-5xl xl:text-6xl !leading-[60px]">
-            Explore, collect, and trade NFTs 🖼
+          <h1 className="font-bold text-4xl xl:text-5xl !leading-[60px]">
+            Unlock NFT potential. Collect & trade with ease.
           </h1>
           <p className="text-xl text-slate-400">
-            Discover the most outstanding NTFs in all topics of life. Creative
-            your NTFs and sell them
+            Unlock the doors to boundless opportunities with the finest
+            selection of NFTs covering every aspect of life.
           </p>
           <div className="flex items-center justify-center p-3 bg-sky-600 hover:bg-sky-700 rounded-full w-full text-slate-200 lg:max-w-xs text-center font-medium cursor-pointer">
             Start your search <MagnifyingGlassIcon className="ml-1 w-5 h-5" />
