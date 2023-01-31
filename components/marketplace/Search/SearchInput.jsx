@@ -6,7 +6,7 @@ import {
 import useOutsideDetection from '@/components/hooks/useOutsideDetection';
 import { classNames } from '@/lib/helpers';
 
-const MockData = [
+const mockData = [
   'Example Item #1',
   'Example Item #2',
   'Example Item #3',
@@ -23,8 +23,8 @@ const SearchInput = () => {
   return (
     <div
       className={classNames(
-        isActive ? 'dark:bg-slate-700 bg-white shadow-xl' : null,
-        'flex flex-1 relative items-center p-7 rounded-full w-full'
+        isActive ? 'dark:bg-slate-700 bg-white shadow-xl rounded-full' : null,
+        'flex flex-1 relative items-center p-7 lg:rounded-full w-full cursor-pointer'
       )}
       onClick={() => {
         setIsActive(true);
@@ -52,7 +52,7 @@ const SearchInput = () => {
         )}
       >
         <ul>
-          {MockData.map((md) => (
+          {mockData.map((md) => (
             <li
               key={md}
               className="inline-flex items-center hover:bg-slate-200 dark:hover:bg-slate-700 w-full py-4 px-6 cursor-pointer"
