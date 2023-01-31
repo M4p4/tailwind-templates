@@ -44,10 +44,15 @@ const SearchItem = () => {
         <ul>
           {mockData.map((md) => (
             <li
-              key={md}
+              key={md.type}
               className="inline-flex items-center w-full py-4 px-6 cursor-pointer"
             >
-              <input type="checkbox" className="h-6 w-6" checked={md.checked} />
+              <input
+                type="checkbox"
+                className="h-6 w-6"
+                checked={md.checked}
+                readOnly
+              />
               <div className="ml-3 flex flex-col">
                 <div className="flex font-semibold">{md.type}</div>
                 <div className="flex text-sm text-gray-400">{md.desc}</div>
