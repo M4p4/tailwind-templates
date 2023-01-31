@@ -15,7 +15,7 @@ const HeroSection = () => {
             Unlock the doors to boundless opportunities with the finest
             selection of NFTs covering every aspect of life.
           </p>
-          <div className="flex items-center justify-center p-3 bg-sky-600 hover:bg-sky-700 rounded-full w-full text-slate-200 lg:max-w-xs text-center font-medium cursor-pointer">
+          <div className="flex items-center justify-center p-3 bg-sky-600 hover:bg-sky-700 rounded-full w-full text-slate-100 lg:max-w-xs text-center font-medium cursor-pointer">
             Start your search <MagnifyingGlassIcon className="ml-1 w-5 h-5" />
           </div>
         </div>

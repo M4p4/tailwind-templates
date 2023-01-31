@@ -18,7 +18,7 @@ const Search = () => {
             <span className="lg:hidden font-medium text-xl text-slate-200">
               Search
             </span>
-            <MagnifyingGlassIcon className="w-8 h-8 text-slate-200" />
+            <MagnifyingGlassIcon className="w-8 h-8 text-slate-100" />
           </div>
         </div>
       </div>

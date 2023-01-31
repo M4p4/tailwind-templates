@@ -59,9 +59,9 @@ const SearchPrice = () => {
           <div className="flex flex-row justify-between items-center pt-5 text-sm">
             <div>
               <span className="font-medium">Min price</span>
-              <div className="relative border border-slate-700 rounded-full w-24 mt-1">
+              <div className="relative border-y border-r dark:border-slate-700 border-slate-400 rounded-full w-24 mt-1 py-1">
                 <input
-                  className="bg-slate-800 focus:outline-none w-16 border-l border-slate-700 pl-3 rounded-l-full"
+                  className="dark:bg-slate-800 focus:outline-none w-16 border-l dark:border-slate-700 border-slate-400 pl-3 rounded-l-full"
                   type="number"
                   value={minPrice}
                   min={0.01}
@@ -69,16 +69,16 @@ const SearchPrice = () => {
                     setMinPrice(+e.target.value || 0.01);
                   }}
                 />
-                <div className="absolute right-2 top-0 text-gray-400 text-sm">
+                <div className="absolute right-2 top-1 dark:text-gray-400 text-sm text-slate-400">
                   ETH
                 </div>
               </div>
             </div>
             <div>
               <span className="font-medium">Max price</span>
-              <div className="relative border border-slate-700 rounded-full w-24 mt-1">
+              <div className="relative border-y border-r dark:border-slate-700 border-slate-400 rounded-full w-24 mt-1 py-1">
                 <input
-                  className="bg-slate-800 focus:outline-none w-16 border-l border-slate-700 pl-3 rounded-l-full"
+                  className="dark:bg-slate-800 focus:outline-none w-16 border-l dark:border-slate-700 border-slate-400 pl-3 rounded-l-full"
                   type="number"
                   value={maxPrice}
                   max={10}
@@ -86,7 +86,7 @@ const SearchPrice = () => {
                     setMaxPrice(+e.target.value || 0.01);
                   }}
                 />
-                <div className="absolute right-2 top-0 text-gray-400 text-sm">
+                <div className="absolute right-2 top-1 dark:text-gray-400 text-slate-400 text-sm">
                   ETH
                 </div>
               </div>
