@@ -4,15 +4,9 @@ import {
   MagnifyingGlassIcon,
 } from '@heroicons/react/24/solid';
 
-import {
-  BellIcon,
-  Bars3Icon,
-  MoonIcon,
-  SunIcon,
-} from '@heroicons/react/24/outline';
+import { Bars3Icon, MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 import Sidebar from './Sidebar';
 import useTheme from '@/components/hooks/useTheme';
-import Image from 'next/image';
 import Avatar from './Avatar';
 import Notifications from './Notifications';
 

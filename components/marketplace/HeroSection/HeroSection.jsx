@@ -1,6 +1,7 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import React from 'react';
+import Search from '../Search/Search';
 
 const HeroSection = () => {
   return (
@@ -18,7 +19,7 @@ const HeroSection = () => {
             Start your search <MagnifyingGlassIcon className="ml-1 w-5 h-5" />
           </div>
         </div>
-        <div className="w-full lg:w-1/2 flex-grow ">
+        <div className="w-full lg:w-1/2 flex-grow">
           <Image
             className="rounded-xl w-full"
             src="/images/hero-1.jpeg"
@@ -28,6 +29,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
+      <Search />
     </>
   );
 };
