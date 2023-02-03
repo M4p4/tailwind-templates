@@ -13,7 +13,7 @@ const Search = () => {
       <SearchSale />
       <SearchPrice />
       <div className="flex flex-1 relative w-full items-end justify-end lg:max-w-[4px]">
-        <div className="bg-sky-600 cursor-pointer hover:bg-sky-700 rounded-full p-4 lg:mr-4 w-full lg:w-auto text-center">
+        <div className="bg-sky-600 cursor-pointer hover:bg-sky-700 rounded-full p-4 lg:mr-1 w-full lg:w-auto text-center">
           <div className="inline-flex lg:flex items-center space-x-3 lg:space-x-0">
             <span className="lg:hidden font-medium text-xl text-slate-200">
               Search

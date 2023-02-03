@@ -24,7 +24,7 @@ const SearchInput = () => {
     <div
       className={classNames(
         isActive ? 'dark:bg-slate-700 bg-white shadow-xl rounded-full' : null,
-        'flex flex-1 relative items-center p-7 lg:rounded-full w-full cursor-pointer'
+        'flex flex-1 relative items-center p-4 lg:rounded-full w-full cursor-pointer'
       )}
       onClick={() => {
         setIsActive(true);

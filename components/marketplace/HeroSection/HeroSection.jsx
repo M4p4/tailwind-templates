@@ -22,7 +22,7 @@ const HeroSection = () => {
         <div className="w-full lg:w-1/2 flex-grow">
           <Image
             className="rounded-xl w-full"
-            src="/images/hero-1.jpeg"
+            src="/images/hero/hero-1.jpeg"
             alt="hero image"
             width={500}
             height={500}
