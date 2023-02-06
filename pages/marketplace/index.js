@@ -4,7 +4,7 @@ import NtfOverview from '@/components/marketplace/NtfOverview/NtfOverview';
 import Steps from '@/components/marketplace/Steps/Steps';
 
 const Marketplace = () => {
-  const nftMock = { likes: 13 };
+  const nftMock = { likes: 13, title: 'I am a test', price: '1.000' };
 
   return (
     <MainLayout>
