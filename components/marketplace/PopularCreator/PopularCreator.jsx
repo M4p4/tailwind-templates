@@ -68,6 +68,27 @@ const mockData = [
     avatar: '/images/me.jpg',
     image: '/images/hero/hero-1.jpeg',
   },
+  {
+    name: 'Jaro Ratz',
+    eth: '42.337',
+    following: false,
+    avatar: '/images/me.jpg',
+    image: '/images/hero/hero-1.jpeg',
+  },
+  {
+    name: 'Jaro Ratz',
+    eth: '22.337',
+    following: true,
+    avatar: '/images/me.jpg',
+    image: '/images/hero/hero-2.jpeg',
+  },
+  {
+    name: 'Jaro Ratz',
+    eth: '44.337',
+    following: false,
+    avatar: '/images/me.jpg',
+    image: '/images/hero/hero-1.jpeg',
+  },
 ];
 
 const PopularCreator = () => {
@@ -102,8 +123,17 @@ const PopularCreator = () => {
 
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 py-12">
         {mockData.map((creator, i) => (
-          <CreatorCard key={i} creator={creator} />
+          <CreatorCard key={i} creator={{ ...creator, rank: i + 1 }} />
         ))}
+      </div>
+
+      <div className="flex flex-row items-center space-x-5 justify-center">
+        <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-800 border dark:border-gray-500 border-gray-200 rounded-full px-4 py-3 cursor-pointer font-medium w-48 text-center shadow-xl">
+          Show me more
+        </div>
+        <div className="bg-sky-600 hover:bg-sky-700 rounded-full px-4 py-3 text-slate-100 cursor-pointer font-medium w-48 text-center shadow-xl">
+          Become an author
+        </div>
       </div>
     </div>
   );

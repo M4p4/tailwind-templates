@@ -1,17 +1,32 @@
+import { classNames } from '@/lib/helpers';
 import Image from 'next/image';
 import React from 'react';
 
 const CreatorCard = ({ creator }) => {
-  const { name, avatar, image, following, eth } = creator;
+  const { name, avatar, image, following, eth, rank } = creator;
   return (
     <div className="flex flex-col dark:bg-slate-800 bg-white shadow-xl rounded-3xl">
-      <Image
-        className="h-36 object-cover rounded-3xl overflow-hidden"
-        src={image}
-        alt="example image"
-        width={500}
-        height={500}
-      />
+      <div className="relative">
+        <Image
+          className="h-36 object-cover rounded-3xl overflow-hidden w-full"
+          src={image}
+          alt="example image"
+          width={500}
+          height={500}
+        />
+        {rank <= 3 ? (
+          <div className="absolute top-2 left-3">
+            <div
+              className={classNames(
+                rank === 1 ? 'bg-red-200 text-red-600' : null,
+                rank === 2 ? 'bg-emerald-200 text-emerald-600' : null,
+                rank === 3 ? 'bg-yellow-200 text-yellow-600' : null,
+                'text-sm px-2 py-1 rounded-full'
+              )}
+            >{`${rank === 1 ? '🏆' : '🏅'} #${rank}`}</div>
+          </div>
+        ) : null}
+      </div>
       <div className="p-4">
         <div className="relative flex items-center justify-center">
           <div className="absolute">
@@ -47,7 +62,7 @@ const CreatorCard = ({ creator }) => {
             </div>
           </div>
           {following ? (
-            <div className="py-2 px-4 dark:bg-slate-900 bg-white hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-800 border dark:border-gray-500 border-gray-200 rounded-full cursor-pointer text-sm">
+            <div className="py-2 px-4 dark:bg-slate-900 bg-white hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border dark:border-gray-500 border-gray-200 rounded-full cursor-pointer text-sm">
               Following
             </div>
           ) : (
