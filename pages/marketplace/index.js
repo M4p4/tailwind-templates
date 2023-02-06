@@ -1,6 +1,7 @@
 import HeroSection from '@/components/marketplace/HeroSection/HeroSection';
 import MainLayout from '@/components/marketplace/Layout/MainLayout';
 import NtfOverview from '@/components/marketplace/NtfOverview/NtfOverview';
+import PopularCreator from '@/components/marketplace/PopularCreator/PopularCreator';
 import Steps from '@/components/marketplace/Steps/Steps';
 
 const Marketplace = () => {
@@ -13,6 +14,7 @@ const Marketplace = () => {
         <Steps />
       </div>
       <NtfOverview nftData={nftMock} />
+      <PopularCreator />
     </MainLayout>
   );
 };
