@@ -1,4 +1,5 @@
 import BrowseCategory from '@/components/marketplace/BrowseCategory/BrowseCategory';
+import Footer from '@/components/marketplace/Footer/Footer';
 import HeroSection from '@/components/marketplace/HeroSection/HeroSection';
 import MainLayout from '@/components/marketplace/Layout/MainLayout';
 import NtfOverview from '@/components/marketplace/NtfOverview/NtfOverview';
