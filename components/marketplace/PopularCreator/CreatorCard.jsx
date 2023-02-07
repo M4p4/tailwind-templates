@@ -31,7 +31,7 @@ const CreatorCard = ({ creator }) => {
         <div className="relative flex items-center justify-center">
           <div className="absolute">
             <svg
-              class="mx-auto h-14 -mt-5 text-white dark:text-slate-800 dark:group-hover:text-slate-800"
+              className="mx-auto h-14 -mt-5 text-white dark:text-slate-800 dark:group-hover:text-slate-800"
               width="134"
               height="54"
               viewBox="0 0 134 54"

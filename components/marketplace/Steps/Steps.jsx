@@ -40,7 +40,7 @@ const Steps = () => {
         <Image
           className="mb-5 lg:mb-10"
           src="/images/steps/step3.png"
-          alt="Step 1"
+          alt="Step 3"
           width={100}
           height={100}
         />
@@ -74,6 +74,7 @@ const Steps = () => {
           src="/images/steps/stepsbg.svg"
           width={1024}
           height={128}
+          alt="Steps bg"
           className="w-full"
         />
       </div>
