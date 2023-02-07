@@ -27,13 +27,13 @@ const BrowseCategory = ({ categories, options }) => {
 
   return (
     <div
-      className="bg-slate-900 py-10 container px-5 mt-5 lg:mt-20 mx-auto pb-20 lg:pb-30"
+      className="dark:bg-slate-900 bg-slate-50 py-10 container px-5 mt-5 lg:mt-20 mx-auto pb-20 lg:pb-30"
       ref={sliderRef}
     >
       <div className="flex flex-col sm:flex-row justify-between">
         <div className="flex flex-col space-y-3">
           <h2 className="text-4xl font-semibold">Browse by category</h2>
-          <div className="text-xl font-light text-gray-400">
+          <div className="text-xl font-light dark:text-gray-400 text-gray-500">
             Explore the NFTs in the most featured categories.
           </div>
         </div>
@@ -45,8 +45,10 @@ const BrowseCategory = ({ categories, options }) => {
             onMouseEnter={() => setLeftIsActive(true)}
             data-glide-dir="<"
             className={classNames(
-              leftIsActive ? 'border-slate-700' : 'border-slate-900',
-              'hover:border-slate-700 border-2 p-1 rounded-full w-10 h-10'
+              leftIsActive
+                ? 'dark:border-slate-700 border-gray-300'
+                : 'dark:border-slate-900 border-slate-50',
+              'dark:hover:border-slate-700 hover:border-gray-300 border-2 p-1 rounded-full w-10 h-10'
             )}
           >
             <ChevronLeftIcon />
@@ -55,8 +57,10 @@ const BrowseCategory = ({ categories, options }) => {
             onMouseEnter={() => setLeftIsActive(false)}
             data-glide-dir=">"
             className={classNames(
-              !leftIsActive ? 'border-slate-700' : 'border-slate-900',
-              'hover:border-slate-700 border-2 p-1 rounded-full w-10 h-10'
+              !leftIsActive
+                ? 'dark:border-slate-700 border-gray-300'
+                : 'dark:border-slate-900 border-slate-50',
+              'dark:hover:border-slate-700 hover:border-gray-300 border-2 p-1 rounded-full w-10 h-10'
             )}
           >
             <ChevronRightIcon />
@@ -92,7 +96,7 @@ const BrowseCategory = ({ categories, options }) => {
                       <h2 className="text-base sm:text-lg font-medium truncate">
                         {category.name}
                       </h2>
-                      <span className="block mt-1 text-sm">
+                      <span className="block mt-1 text-sm dark:text-gray-400 text-gray-500">
                         {category.amount} NFTs
                       </span>
                     </div>
