@@ -1,3 +1,4 @@
+import BrowseCategory from '@/components/marketplace/BrowseCategory/BrowseCategory';
 import HeroSection from '@/components/marketplace/HeroSection/HeroSection';
 import MainLayout from '@/components/marketplace/Layout/MainLayout';
 import NtfOverview from '@/components/marketplace/NtfOverview/NtfOverview';
@@ -15,6 +16,7 @@ const Marketplace = () => {
       </div>
       <NtfOverview nftData={nftMock} />
       <PopularCreator />
+      <BrowseCategory />
     </MainLayout>
   );
 };
