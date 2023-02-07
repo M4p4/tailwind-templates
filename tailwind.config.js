@@ -7,6 +7,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      aspectRatio: {
+        '4/3': '4 / 3',
+      },
       fontFamily: {
         inter: ['inter', 'serif'],
       },
