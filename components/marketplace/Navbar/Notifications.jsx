@@ -48,7 +48,7 @@ const Notifications = () => {
       </button>
 
       {showMenu ? (
-        <div className="absolute z-10 w-screen max-w-xs sm:max-w-sm translate-y-0 -right-28 sm:right-0 mt-3">
+        <div className="absolute z-20 w-screen max-w-xs sm:max-w-sm translate-y-0 -right-28 sm:right-0 mt-3">
           <div className="dark:bg-slate-800 bg-white p-5 rounded-2xl grid grid-cols-1 gap-3 border border-slate-200 dark:border-slate-700">
             <h3 className="font-semibold text-xl">Notifications</h3>
             {mockNotifactions.map((notification, i) => (

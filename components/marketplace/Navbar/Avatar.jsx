@@ -49,7 +49,7 @@ const Avatar = ({ smallSize = false }) => {
       {showMenu ? (
         <div
           className={classNames(
-            'absolute z-10 w-screen max-w-[260px] px-4 mt-3 -right-20 sm:right-0 sm:px-0 translate-y-0'
+            'absolute z-20 w-screen max-w-[260px] px-4 mt-3 -right-20 sm:right-0 sm:px-0 translate-y-0'
           )}
         >
           <div className="dark:bg-slate-800 bg-white p-5 rounded-2xl grid grid-cols-1 gap-5 border border-slate-200 dark:border-slate-700">
