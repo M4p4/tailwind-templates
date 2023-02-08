@@ -7,7 +7,7 @@ import SearchSale from './SearchSale';
 
 const Search = () => {
   return (
-    <div className="relative flex flex-col lg:flex-row justify-between items-center bg-white dark:bg-slate-800 w-full rounded-[40px] lg:rounded-full mt-5 lg:-mt-[50px] shadow-xl z-10 divide-y divide-slate-700 lg:divide-y-0">
+    <div className="relative flex flex-col lg:flex-row justify-between items-center bg-white dark:bg-slate-800 w-full rounded-[40px] lg:rounded-full mt-5 lg:-mt-[50px] shadow-xl z-10 divide-y dark:divide-slate-700 lg:divide-y-0">
       <SearchInput />
       <SearchItem />
       <SearchSale />
