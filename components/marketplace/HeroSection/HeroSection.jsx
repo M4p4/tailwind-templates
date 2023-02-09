@@ -1,3 +1,4 @@
+import { shimmer, toBase64 } from '@/lib/helpers';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import React from 'react';
@@ -22,6 +23,10 @@ const HeroSection = () => {
           </div>
           <div className="w-full lg:w-1/2 flex-grow">
             <Image
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                shimmer(500, 500)
+              )}`}
               className="rounded-xl w-full"
               src="/images/hero/hero-1.jpeg"
               alt="hero image"

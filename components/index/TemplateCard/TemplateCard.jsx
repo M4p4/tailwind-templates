@@ -1,3 +1,4 @@
+import { shimmer, toBase64 } from '@/lib/helpers';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -12,6 +13,10 @@ const TemplateCard = ({ template }) => {
             className="w-full h-full object-cover rounded-2xl"
             src={image}
             alt={title}
+            placeholder="blur"
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(
+              shimmer(700, 475)
+            )}`}
             width={400}
             height={500}
           />

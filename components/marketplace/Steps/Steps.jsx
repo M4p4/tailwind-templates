@@ -1,3 +1,4 @@
+import { shimmer, toBase64 } from '@/lib/helpers';
 import Image from 'next/image';
 import React from 'react';
 
@@ -9,6 +10,10 @@ const Steps = () => {
           className="mb-5 lg:mb-10"
           src="/images/steps/step1.png"
           alt="Step 1"
+          placeholder="blur"
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(
+            shimmer(100, 100)
+          )}`}
           width={100}
           height={100}
         />
@@ -25,6 +30,10 @@ const Steps = () => {
           className="mb-5 lg:mb-10"
           src="/images/steps/step2.png"
           alt="Step 2"
+          placeholder="blur"
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(
+            shimmer(100, 100)
+          )}`}
           width={100}
           height={100}
         />
@@ -41,6 +50,10 @@ const Steps = () => {
           className="mb-5 lg:mb-10"
           src="/images/steps/step3.png"
           alt="Step 3"
+          placeholder="blur"
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(
+            shimmer(100, 100)
+          )}`}
           width={100}
           height={100}
         />
@@ -57,6 +70,10 @@ const Steps = () => {
           className="mb-5 lg:mb-10"
           src="/images/steps/step4.png"
           alt="Step 4"
+          placeholder="blur"
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(
+            shimmer(100, 100)
+          )}`}
           width={100}
           height={100}
         />

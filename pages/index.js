@@ -29,7 +29,9 @@ const Home = () => {
         </div>
       </div>
       <div className="absolute bottom-5 w-full text-center">
-        <span className="text-slate-400">Made with ❤️ by Jaro Ratz</span>
+        <span className="text-slate-400">
+          Made with <span className="text-red-800">❤️</span> by Jaro Ratz
+        </span>
       </div>
     </div>
   );

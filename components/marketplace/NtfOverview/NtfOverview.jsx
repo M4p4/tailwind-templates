@@ -1,4 +1,4 @@
-import { classNames } from '@/lib/helpers';
+import { classNames, toBase64, shimmer } from '@/lib/helpers';
 import { ClockIcon } from '@heroicons/react/24/outline';
 import { HeartIcon, VideoCameraIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
@@ -116,6 +116,10 @@ const NtfOverview = ({ nftData }) => {
               <Image
                 className="rounded-3xl object-cover w-full dark:border-slate-800 border-white border-[14px] max-h-[756px] shadow-xl"
                 src="/images/overview/nft-1.png"
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                  shimmer(512, 512)
+                )}`}
                 width={512}
                 height={512}
                 alt="Nft"

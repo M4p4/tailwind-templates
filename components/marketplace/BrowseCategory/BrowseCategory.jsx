@@ -1,4 +1,4 @@
-import { classNames } from '@/lib/helpers';
+import { classNames, shimmer, toBase64 } from '@/lib/helpers';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
@@ -74,6 +74,10 @@ const BrowseCategory = ({ categories, options }) => {
               <li className="glide__slide" key={i}>
                 <div className="flex flex-col">
                   <Image
+                    placeholder="blur"
+                    blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                      shimmer(300, 300)
+                    )}`}
                     className="rounded-2xl aspect-[4/3] object-cover h-36 w-96"
                     src={category.image}
                     width={300}
